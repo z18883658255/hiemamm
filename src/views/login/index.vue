@@ -38,16 +38,18 @@
             <el-button class="loginbnt" type="primary" @click="onSubmit">登录</el-button>
           </el-form-item>
           <el-form-item>
-            <el-button class="loginbnt" type="primary">注册</el-button>
+            <el-button class="loginbnt" type="primary" @click="openregister">注册</el-button>
           </el-form-item>
         </el-form>
       </div>
     </div>
     <img class="rightimg" src="../../assets/login_banner_ele.png" alt />
+    <register ref="register" />
   </div>
 </template>
 
 <script>
+import register from "./components/register.vue";
 export default {
   data() {
     return {
@@ -98,7 +100,13 @@ export default {
           this.$message.error("验证不通过");
         }
       });
+    },
+    openregister(){
+      this.$refs.register.dialogFormVisible = true
     }
+  },
+  components: {
+    register
   }
 };
 </script>

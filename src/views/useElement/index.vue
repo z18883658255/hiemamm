@@ -2,6 +2,7 @@
   <div>
     我是useElement
     <el-input  placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input1"></el-input>
+    
   </div>
 </template>
 
